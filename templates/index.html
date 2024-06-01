@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Sales Data Analyzer!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input[type="file"] {
+            font-size: 16px;
+            padding: 10px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        p {
+            max-width: 800px;
+            margin: 0 auto 20px;
+            text-align: center;
+        }
+        ol {
+            max-width: 600px;
+            margin: 0 auto;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h1, h2 {
+            color: #333;
+        }
+
+        .analysis-block {
+            display: flex;
+            margin-bottom: 20px;
+            background-color:whitesmoke;
+
+        }
+        .analysis-block1 {
+            margin-bottom: 20px;
+            background-color:whitesmoke;
+            padding: 100px;
+        }
+
+        .analysis-block .chart-container {
+            flex: 1;
+            margin-right: 20px;
+            padding: 40px;
+            background-color: whitesmoke;
+        }
+
+        .analysis-block .data-list {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .data-list ol {
+            margin: 0;
+            padding: 0;
+            list-style-type: decimal;
+        }
+
+        .data-list ol li {
+            margin: 8px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Sales Data Insights Provider!</h1>
+    <p>This application helps companies gain valuable insights from their sales data. When you submit your data, we provide you with detailed plots and analyses to enhance your business strategies.</p>
+
+    <h2>What We Offer</h2>
+    <ol>
+        <li>Sales Analysis by Hour: Identify peak sales hours for effective scheduling of advertisements and promotions.</li>
+        <li>Monthly Sales Analysis: Evaluate sales trends over each month for strategic planning of promotions and advertising campaigns.</li>
+        <li>City-wise Sales Analysis: Gain insights into sales trends across different cities for targeted marketing and promotions.</li>
+        <li>Category-wise Sales Analysis: Understand which product categories are the top sellers for strategic marketing and promotions.</li>
+        <li>Most Profitable Products: Discover which products contribute the most to your profits.</li>
+        <li>Discover the most frequently paired products that customers buy together</li>
+        <li>Analysis of Sales by Quantity Ordered: Determine the busiest periods for optimizing advertising and promotional activities.</li>
+
+    </ol>
+
+    <h2>How to Use</h2>
+    <ol>
+        <li>Please ensure that the dataset includes the following columns, and maintain the column names as follows: Order ID, Product, Quantity Ordered, Price Each, Order Date, Purchase Address, and Category.</li>
+        <li>Upload CSV file and click on SUBMIT</li>
+        <li>Kindly hold on for a moment as we're processing a large dataset.</li>
+        <li>Receive Customized Analysis: Once you submit your data, our application will generate interactive plots and analyses tailored to your sales information.</li>
+        <li>Gain Valuable Insights: Explore the provided visualizations to uncover valuable insights about your sales performance.</li>
+    </ol>
+
+    <form action="/analyze" method="post" enctype="multipart/form-data">
+        <input type="file" name="csv_file" accept=".csv">
+        <input type="submit" value="Upload">
+    </form>
+    <br>
+    <br>
+    <p>To test our application, you can download the sample data <a href="/download" download="data.csv"> here</a>.
+        <br> Once you have the data, please upload it using the provided upload feature in the application. </p>
+
+</body>
+</html>
